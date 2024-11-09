@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Information System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100 flex">
+    <!-- Navigation Sidebar -->
+    <nav class="w-64 bg-blue-800 text-white p-5 min-h-screen">
+      <div class="text-center text-xl font-semibold mb-8">
+        <h2>Hospital Information System</h2>
+      </div>
+      <ul>
+        <li class="mb-4">
+          <a href="admindashboard.html" class="hover:text-blue-300"
+            >Dashboard</a
+          >
+        </li>
+        <li class="mb-4">
+          <a href="registration.html" class="hover:text-blue-300"
+            >Register Patient</a
+          >
+        </li>
+        <li class="mb-4">
+          <a href="doctorconsultation.html" class="hover:text-blue-300"
+            >Doctor Consultation</a
+          >
+        </li>
+        <li class="mb-4">
+          <a href="treatment.html" class="hover:text-blue-300">Treatment</a>
+        </li>
+        <li class="mb-4">
+          <a href="billing.html" class="hover:text-blue-300">Billing</a>
+        </li>
+        <li class="mb-4">
+          <a href="employeedashboard.html" class="hover:text-blue-300"
+            >Employee Dashboard</a
+          >
+        </li>
+        <li class="mt-8">
+          <a href="./login.html" class="hover:text-blue-300">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex-1 p-6">
+        <!-- Header Section -->
+        <header class="flex justify-between items-center mb-8">
+          <a
+            href="employeedashboard.html"
+            class="flex justify-between items-center w-full"
+          >
+            <h1 class="text-3xl font-semibold">Dashboard</h1>
+            <div class="flex items-center space-x-4">
+              <span class="text-lg">Welcome, Pat</span>
+              <img
+                src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-1/427990154_3692324207668347_7927056567437163865_n.jpg?stp=dst-jpg_s200x200&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeEcJQ4irZeZadRZD89lokol72tVYkrVVe_va1ViStVV76vyFRt4LCEEsb1lDLq-uf5IBF74sV_2FNckjFHmgDvO&_nc_ohc=e_FQr6jsSNcQ7kNvgH4hfMK&_nc_zt=24&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=ALynKVOHfvrUKeN4hDHncQQ&oh=00_AYDkUli2WhQ3ZzB4xpngPEhlM2YSau6FJ8QFQP7P3TEJqg&oe=67312718"
+                alt="User Avatar"
+                class="w-10 h-10 rounded-full"
+              />
+            </div>
+          </a>
+        </header>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3
+         gap-20 w-full max-w-4xl mx-auto"
+      >
+        <!-- Personal Details Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4">Personal Details</h2>
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-gray-700">Name:</span>
+              <span class="font-medium">Pat Rodriguez</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Age:</span>
+              <span class="font-medium">20</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Position:</span>
+              <span class="font-medium">Admission Staff</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Department:</span>
+              <span class="font-medium">Emergency</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payroll Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4">Payroll</h2>
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-gray-700">Basic Salary:</span>
+              <span class="font-medium">$3,500</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Bonus:</span>
+              <span class="font-medium">$500</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Deductions:</span>
+              <span class="font-medium">-$200</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Total Salary:</span>
+              <span class="font-medium">$3,800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-4">Attendance</h2>
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-gray-700">Days Present:</span>
+              <span class="font-medium">22</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Days Absent:</span>
+              <span class="font-medium">3</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Leaves Taken:</span>
+              <span class="font-medium">1</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-700">Working Hours:</span>
+              <span class="font-medium">160 hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

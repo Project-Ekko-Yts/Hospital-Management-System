@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Billing - Billing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Main Content -->
+    <div class="flex min-h-screen bg-gray-100">
+      <nav class="w-64 bg-blue-800 text-white p-5">
+        <div class="text-center text-xl font-semibold mb-8">
+          <h2>Hospital Information System</h2>
+        </div>
+        <ul>
+          <li class="mb-4">
+            <a href="admindashboard.html" class="hover:text-blue-300"
+              >Dashboard</a
+            >
+          </li>
+          <li class="mb-4">
+            <a href="registration.html" class="hover:text-blue-300"
+              >Register Patient</a
+            >
+          </li>
+          <li class="mb-4">
+            <a href="doctorconsultation.html" class="hover:text-blue-300"
+              >Doctor Consultation</a
+            >
+          </li>
+          <li class="mb-4">
+            <a href="treatment.html" class="hover:text-blue-300">Treatment</a>
+          </li>
+          <li class="mb-4">
+            <a href="/billing.html" class="hover:text-blue-300">Billing</a>
+          </li>
+          <li class="mb-4">
+            <a href="/employeedashboard.html" class="hover:text-blue-300"
+              >Employee Dashboard</a
+            >
+          </li>
+          <li class="mt-8">
+            <a href="./login.html" class="hover:text-blue-300">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex-1 p-6">
+        <!-- Header Section -->
+        <header class="flex justify-between items-center mb-8">
+          <a
+            href="employeedashboard.html"
+            class="flex justify-between items-center w-full"
+          >
+            <h1 class="text-3xl font-semibold">Dashboard</h1>
+            <div class="flex items-center space-x-4">
+              <span class="text-lg">Welcome, Pat</span>
+              <img
+                src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-1/427990154_3692324207668347_7927056567437163865_n.jpg?stp=dst-jpg_s200x200&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeEcJQ4irZeZadRZD89lokol72tVYkrVVe_va1ViStVV76vyFRt4LCEEsb1lDLq-uf5IBF74sV_2FNckjFHmgDvO&_nc_ohc=e_FQr6jsSNcQ7kNvgH4hfMK&_nc_zt=24&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=ALynKVOHfvrUKeN4hDHncQQ&oh=00_AYDkUli2WhQ3ZzB4xpngPEhlM2YSau6FJ8QFQP7P3TEJqg&oe=67312718"
+                alt="User Avatar"
+                class="w-10 h-10 rounded-full"
+              />
+            </div>
+          </a>
+        </header>
+      <!-- Billing Form Section -->
+      <div class="w-full flex justify-center items-center p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
+          <h2 class="text-3xl font-semibold text-center text-blue-800 mb-6">
+            Patient Billing Information
+          </h2>
+          <form action="#" method="POST">
+            <!-- Patient Info -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="patientName" class="block text-gray-700"
+                  >Patient Name</label
+                >
+                <input
+                  type="text"
+                  id="patientName"
+                  name="patientName"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              <div>
+                <label for="patientID" class="block text-gray-700"
+                  >Patient ID</label
+                >
+                <input
+                  type="text"
+                  id="patientID"
+                  name="patientID"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Billing Details -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="treatmentCost" class="block text-gray-700"
+                  >Treatment Cost ($)</label
+                >
+                <input
+                  type="number"
+                  id="treatmentCost"
+                  name="treatmentCost"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              <div>
+                <label for="additionalCharges" class="block text-gray-700"
+                  >Additional Charges ($)</label
+                >
+                <input
+                  type="number"
+                  id="additionalCharges"
+                  name="additionalCharges"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="discount" class="block text-gray-700"
+                  >Discount (%)</label
+                >
+                <input
+                  type="number"
+                  id="discount"
+                  name="discount"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  value="0"
+                  min="0"
+                  max="100"
+                />
+              </div>
+              <div>
+                <label for="totalAmount" class="block text-gray-700"
+                  >Total Amount ($)</label
+                >
+                <input
+                  type="text"
+                  id="totalAmount"
+                  name="totalAmount"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <button
+                type="button"
+                onclick="calculateTotal()"
+                class="bg-blue-600 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700"
+              >
+                Calculate Total
+              </button>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="mt-6">
+              <label for="paymentMethod" class="block text-gray-700"
+                >Payment Method</label
+              >
+              <select
+                id="paymentMethod"
+                name="paymentMethod"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="cash">Cash</option>
+                <option value="credit">Credit Card</option>
+                <option value="insurance">Insurance</option>
+              </select>
+            </div>
+
+            <div class="flex justify-end mt-6">
+              <button
+                type="submit"
+                class="bg-green-600 text-white px-6 py-2 rounded-md shadow-md hover:bg-green-700"
+              >
+                Generate Bill
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Calculate the total amount based on treatment cost, additional charges, and discount
+      function calculateTotal() {
+        let treatmentCost =
+          parseFloat(document.getElementById("treatmentCost").value) || 0;
+        let additionalCharges =
+          parseFloat(document.getElementById("additionalCharges").value) || 0;
+        let discount =
+          parseFloat(document.getElementById("discount").value) || 0;
+
+        // Calculate the total
+        let totalAmount = treatmentCost + additionalCharges;
+        let discountedAmount = totalAmount - totalAmount * (discount / 100);
+
+        // Update the Total Amount field
+        document.getElementById("totalAmount").value =
+          discountedAmount.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
