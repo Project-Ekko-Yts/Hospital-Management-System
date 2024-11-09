@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hospital Information System Dashboard</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind CSS CDN -->
     <script>
@@ -15,7 +16,7 @@
       }
     </script>
   </head>
-  <body class="bg-gray-100 font-sans antialiased">
+  <body class="font-sans antialiased">
     <!-- Main Dashboard Container -->
     <div class="flex h-screen">
       <!-- Sidebar -->
@@ -98,23 +99,44 @@
           </div>
         </section>
 
-        <!-- Recent Activity -->
+        <!-- Recent Activity (Converted to Table) -->
         <section class="mb-8">
           <h2 class="text-2xl font-semibold mb-4">Recent Activity</h2>
-          <ul class="space-y-3">
-            <li class="bg-white p-4 rounded-lg shadow-sm">
-              Patient John Doe admitted - Room 101
-            </li>
-            <li class="bg-white p-4 rounded-lg shadow-sm">
-              Appointment for Dr. Smith - 2:00 PM today
-            </li>
-            <li class="bg-white p-4 rounded-lg shadow-sm">
-              New bill generated for patient Jane Doe
-            </li>
-            <li class="bg-white p-4 rounded-lg shadow-sm">
-              Emergency case: Ambulance arriving at 3:30 PM
-            </li>
-          </ul>
+          <table class="min-w-full table-auto bg-white shadow-lg rounded-lg">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 border text-left">Activity</th>
+                <th class="px-4 py-2 border text-left">Date</th>
+                <th class="px-4 py-2 border text-left">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-2 border">Patient John Doe admitted</td>
+                <td class="px-4 py-2 border">October 15, 2024</td>
+                <td class="px-4 py-2 border">Room 101</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">Appointment for Dr. Smith</td>
+                <td class="px-4 py-2 border">October 15, 2024</td>
+                <td class="px-4 py-2 border">2:00 PM today</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">
+                  New bill generated for patient Jane Doe
+                </td>
+                <td class="px-4 py-2 border">October 14, 2024</td>
+                <td class="px-4 py-2 border">Amount: $500</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">
+                  Emergency case: Ambulance arriving
+                </td>
+                <td class="px-4 py-2 border">October 15, 2024</td>
+                <td class="px-4 py-2 border">3:30 PM</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </div>
     </div>
